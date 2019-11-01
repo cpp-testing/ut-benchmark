@@ -1,6 +1,6 @@
-### **Benchmarks*
+### Benchmarks
 
-| **Clang-9** | [doctest-2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | [μt-1.0.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) |[catch2-2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) |
+| **Clang-9** | [doctest-2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | [μt-1.0.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) |[catch-2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) |
 | ------- | ----- | ----- | ----- |
 | [include](https://github.com/cpp-testing/ut-benchmark) | 1.29s | 0.42s | 5.44s |
 | [assert](https://github.com/cpp-testing/ut-benchmark)  | 1.30s | 0.48s | 5.23s |
