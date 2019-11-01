@@ -1,25 +1,11 @@
-all: include assert test
+all: include.benchmark assert.benchmark test.benchmark
 
-include:
-	time $(CXX) -std=c++2a -c -I doctest/include doctest/include.cpp
-	time $(CXX) -std=c++2a -O3 -c -I doctest/include doctest/include.cpp
-	time $(CXX) -std=c++2a -c -I ut/include ut/include.cpp
-	time $(CXX) -std=c++2a -O3 -c -I ut/include ut/include.cpp
+%.benchmark: clean
+	@echo -n "$*:doctest "
+	@time -f%e $(CXX) $(CXXFLAGS) -I doctest/include doctest/$*.cpp
 
-assert:
-	time $(CXX) -std=c++2a -I doctest/include doctest/assert.cpp
-	time ./a.out
-	time $(CXX) -std=c++2a -O3 -I doctest/include doctest/assert.cpp
-	time ./a.out
-	time $(CXX) -std=c++2a -I ut/include ut/assert.cpp
-	time ./a.out
-	time $(CXX) -std=c++2a -O3 -I ut/include ut/assert.cpp
+	@echo -n "$*:ut "
+	@time -f%e $(CXX) $(CXXFLAGS) -I ut/include ut/$*.cpp
 
-test:
-	time $(CXX) -std=c++2a -I doctest/include doctest/test.cpp
-	time ./a.out
-	time $(CXX) -std=c++2a -O3 -I doctest/include doctest/test.cpp
-	time ./a.out
-	time $(CXX) -std=c++2a -I ut/include ut/test.cpp
-	time ./a.out
-	time $(CXX) -std=c++2a -O3 -I ut/include ut/test.cpp
+clean:
+	@rm -f *.o *.out
