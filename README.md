@@ -1,6 +1,6 @@
 ### Results
 
-* `compile-time` / `run-time` (smaller is better)
+* `compile-time` / `run-time` (**smaller is better**)
 
 | **Clang-9** | [μt-1.0.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) | [doctest-2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | [catch-2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) |
 | ------- | ----- | ----- | ----- |
