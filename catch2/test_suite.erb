@@ -1,0 +1,8 @@
+#include <catch2/catch.hpp>
+
+<% (0..n).each do |i| %>
+  TEST_CASE("<%= v %>.<%= i %>") {
+    REQUIRE(42 == 42);
+    REQUIRE(43 == 43);
+  }
+<% end %>
