@@ -23,11 +23,11 @@ suite.benchmark suite+assert.benchmark:
 	@make $@.explicit
 
 %.benchmark.explicit:
-	#@make clean
-	#@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat googletest/$*.erb) | erb > googletest_suite_$$v.cpp; done
-	#@time -f"$*:googletest %e" make suite.compile.googletest
-	#@time -f"$*:googletest %e" ./a.out
-	#@ls -lh a.out | cut -d' ' -f6 | xargs echo "$*:googletest"
+	@make clean
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat googletest/$*.erb) | erb > googletest_suite_$$v.cpp; done
+	@time -f"$*:googletest %e" make suite.compile.googletest
+	@time -f"$*:googletest %e" ./a.out
+	@ls -lh a.out | cut -d' ' -f6 | xargs echo "$*:googletest"
 
 	@make clean
 	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat catch2/$*.erb) | erb > catch2_suite_$$v.cpp; done
