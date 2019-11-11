@@ -1,4 +1,4 @@
-all: include.benchmark assert.benchmark test.benchmark suite.benchmark
+all: include.benchmark assert.benchmark test.benchmark suite.benchmark suite+assert.benchmark
 
 N?=100
 
