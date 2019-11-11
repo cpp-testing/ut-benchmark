@@ -1,6 +1,6 @@
 all: include.benchmark assert.benchmark test.benchmark suite.benchmark
 
-N=100
+N?=100
 
 %.benchmark: clean
 	@echo -n "$*:googletest "

@@ -32,8 +32,8 @@ struct string_view {
   constexpr string_view(const char* data = {}, unsigned long size = {})
       : data{data}, size{size} {}
 
-  const char* data{};
   unsigned long size{};
+  const char* data{};
 };
 template <class TLhs, class TRhs>
 auto operator==(TLhs, TRhs);
