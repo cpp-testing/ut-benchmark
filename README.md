@@ -7,7 +7,7 @@
     * `CATCH_CONFIG_FAST_COMPILE`
   * [doctest-2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h)
     * `DOCTEST_CONFIG_SUPER_FAST_ASSERTS, `
-  * [μt-1.0.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp)
+  * [μt-1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp)
 
 * **Benchmarks**
 
@@ -18,8 +18,6 @@
   | [test](https://github.com/cpp-testing/ut-benchmark)           | `1'000 tests, 0 asserts, 1 cpp file`          |
   | [suite](https://github.com/cpp-testing/ut-benchmark)          | `10'000 tests, 0 asserts, 100 cpp files`      |
   | [suite+assert](https://github.com/cpp-testing/ut-benchmark)   | `10'000 tests, 20'200 asserts, 100 cpp files` |
-
-> *Smaller is better*
 
 * **Results**
 

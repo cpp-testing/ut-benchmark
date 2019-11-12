@@ -14,7 +14,7 @@ function plot {
   grep "^$1:" $2.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 >> /tmp/file
 
   gnuplot << EOF
-    set title '$3 / $1 / $2'
+    set title '$3 / $1 / $2 (smaller is better)'
     set ylabel "time [s]"
     set terminal png
     set output '$3_$1_$2.png'
