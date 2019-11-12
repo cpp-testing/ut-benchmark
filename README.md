@@ -1,11 +1,11 @@
 # Benchmarks - Unit Testing Frameworks
 
-| Framework | Version | Configuration |
-|-|-|-|
-| **[GoogleTest](https://github.com/google/googletest)** | [1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0) | |
-| **[Catch](https://github.com/catchorg/Catch2)**        | [2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) | `CATCH_CONFIG_FAST_COMPILE` |
-| **[Doctest](https://github.com/onqtam/doctest)**       | [2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` |
-| **[μt](https://github.com/boost-experimental/ut)**     | [1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) | |
+| Framework     | [GoogleTest](https://github.com/google/googletest) | [Catch](https://github.com/catchorg/Catch2) | [Doctest](https://github.com/onqtam/doctest) | [μt](https://github.com/boost-experimental/ut) |
+| Version       | [1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0) | [2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) | [2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | [1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) |
+| Standard      | C++11 | C++11 | C++11 | C++20 |
+| License       | BSD-3 | Boost 1.0 | MIT | Boost 1.0 |
+| Linkage       | library | single header | single header | single header/module |
+| Test configuration | `static library` | `CATCH_CONFIG_FAST_COMPILE` | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` | |
 
 <table>
   <tr>
