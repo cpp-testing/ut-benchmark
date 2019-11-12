@@ -22,7 +22,7 @@ function plot {
     set style fill solid
     unset key
     set grid
-    plot "/tmp/file" using 2:xtic(1) with boxes
+    plot "/tmp/file" using (\$0):2:(\$0):xticlabels(1) with boxes lc variable
 EOF
 }
 
