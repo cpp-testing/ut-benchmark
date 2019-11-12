@@ -13,12 +13,13 @@
 
   <table>
     <tr>
-      <td align="center">
+      <td colspan="2" align="center">
       <a href="benchmarks"><b>Include</b></a> / <i>0 tests, 0 asserts, 1 cpp file</i>
       </td>
     </tr>
     <tr>
       <td><a href="results/Compilation_include.png"><img src="results/Compilation_include.png"></a></td>
+      <td></td>
     </tr>
   </table>
 
