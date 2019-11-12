@@ -22,8 +22,10 @@
 * **Results**
 
   ![](results/Compilation_include.png)
-  ![](results/Compilation_assert.png)
-  ![](results/Execution_assert.png)
+
+  | | |
+  |-|-|
+  | ![](results/Compilation_assert.png) | ![](results/Execution_assert.png) |
 
   ![](results/Compilation_test.png)
   ![](results/Execution_test.png)
