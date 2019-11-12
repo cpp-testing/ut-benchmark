@@ -6,7 +6,7 @@
   * [catch-2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp)
     * `CATCH_CONFIG_FAST_COMPILE`
   * [doctest-2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h)
-    * `DOCTEST_CONFIG_SUPER_FAST_ASSERTS, `
+    * `DOCTEST_CONFIG_SUPER_FAST_ASSERTS`
   * [μt-1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp)
 
 * **Benchmarks**
@@ -23,7 +23,7 @@
 
   ![](results/Compilation_include.png)
 
-  | | |
+  | `include` | `1 test, 1'000'000 asserts, 1 cpp file` |
   |-|-|
   | ![](results/Compilation_assert.png) | ![](results/Execution_assert.png) |
 
