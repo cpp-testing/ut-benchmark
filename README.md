@@ -14,7 +14,7 @@
     </td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><a href="results/Compilation_include.png"><img src="results/Compilation_include.png"></a></td>
+    <td colspan="2" align="center"><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_include.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_include.png"></a></td>
     <td></td>
   </tr>
 
@@ -24,8 +24,8 @@
     </td>
   </tr>
   <tr>
-    <td><a href="results/Compilation_assert.png"><img src="results/Compilation_assert.png"></a></td>
-    <td><a href="results/Execution_assert.png"><img src="results/Execution_assert.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_assert.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_assert.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_assert.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_assert.png"></a></td>
   </tr>
 
   <tr>
@@ -34,8 +34,8 @@
     </td>
   </tr>
   <tr>
-    <td><a href="results/Compilation_test.png"><img src="results/Compilation_test.png"></a></td>
-    <td><a href="results/Execution_test.png"><img src="results/Execution_test.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_test.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_test.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_test.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_test.png"></a></td>
   </tr>
 
   <tr>
@@ -44,8 +44,8 @@
     </td>
   </tr>
   <tr>
-    <td><a href="results/Compilation_suite.png"><img src="results/Compilation_suite.png"></a></td>
-    <td><a href="results/Execution_suite.png"><img src="results/Execution_suite.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_suite.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_suite.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_suite.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_suite.png"></a></td>
   </tr>
 
   <tr>
@@ -54,7 +54,7 @@
     </td>
   </tr>
   <tr>
-    <td><a href="results/Compilation_suite+assert.png"><img src="results/Compilation_suite+assert.png"></a></td>
-    <td><a href="results/Execution_suite+assert.png"><img src="results/Execution_suite+assert.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_suite+assert.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_suite+assert.png"></a></td>
+    <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_suite+assert.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Execution_suite+assert.png"></a></td>
   </tr>
 </table>
