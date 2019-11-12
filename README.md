@@ -1,3 +1,5 @@
+# Unit Testing Frameworks - Benchmarks
+
 * **Frameworks**
 
   * [googletest-1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0)
@@ -17,7 +19,7 @@
   | [suite](https://github.com/cpp-testing/ut-benchmark)          | `10'000 tests, 0 asserts, 100 cpp files`      |
   | [suite+assert](https://github.com/cpp-testing/ut-benchmark)   | `10'000 tests, 20'200 asserts, 100 cpp files` |
 
-> *smaller is better*
+> *Smaller is better*
 
 * **Results**
 
