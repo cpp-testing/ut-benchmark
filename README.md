@@ -1,6 +1,7 @@
 # Benchmarks - Unit Testing Frameworks
 
 | Framework | [googletest-1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0) | [catch-2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) | [doctest-2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | [μt-1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) |
+|-|-|-|-|-|
 | Config    |  - | `CATCH_CONFIG_FAST_COMPILE` | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` | - |
 
   <table>
