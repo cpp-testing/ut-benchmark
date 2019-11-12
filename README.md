@@ -26,7 +26,7 @@
   <table>
     <tr>
       <td colspan="2" align="center">
-      <a href="benchmarks"><b>Include</b></a> / 1 test, 1'000'000 asserts, 1 cpp file
+      <a href="benchmarks"><b>Assert</b></a> / <i>1 test, 1'000'000 asserts, 1 cpp file</i>
       </td>
     </tr>
     <tr>
