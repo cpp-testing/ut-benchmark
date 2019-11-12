@@ -1,7 +1,7 @@
 # Benchmarks - Unit Testing Frameworks
 
 | Framework | Version | Standard | License | Linkage | Test configuration |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | [GoogleTest](https://github.com/google/googletest) | [1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0) | C++11 | BSD-3 | library | `static library` |
 | [Catch](https://github.com/catchorg/Catch2) | [2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) | C++11 | Boost 1.0 | single header | `CATCH_CONFIG_FAST_COMPILE` |
 | [Doctest](https://github.com/onqtam/doctest) | [2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | C++11 | MIT | single header | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` |
