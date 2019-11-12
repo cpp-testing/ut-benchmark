@@ -11,17 +11,16 @@
 
 * **Benchmarks**
 
-  | Test    | Description |
-  | ------- | ----- |
-  | [include](benchmarks)        | `0 tests, 0 asserts, 1 cpp file`              |
-  | [assert](benchmarks)         | `1 test, 1'000'000 asserts, 1 cpp file`       |
-  | [test](benchmarks)           | `1'000 tests, 0 asserts, 1 cpp file`          |
-  | [suite](benchmarks)          | `10'000 tests, 0 asserts, 100 cpp files`      |
-  | [suite+assert](benchmarks)   | `10'000 tests, 20'200 asserts, 100 cpp files` |
-
-* **Results**
-
-  ![](results/Compilation_include.png)
+  <table>
+    <tr>
+      <td align="center">
+      <a href="benchmarks"><b>Include</b></a> / <i>0 tests, 0 asserts, 1 cpp file</i>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="results/Compilation_include.png"><img src="results/Compilation_include.png"></a></td>
+    </tr>
+  </table>
 
   <table>
     <tr>
@@ -35,11 +34,38 @@
     </tr>
   </table>
 
-  ![](results/Compilation_test.png)
-  ![](results/Execution_test.png)
+  <table>
+    <tr>
+      <td colspan="2" align="center">
+      <a href="benchmarks"><b>Test</b></a> / <i>1'000 tests, 0 asserts, 1 cpp file</i>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="results/Compilation_test.png"><img src="results/Compilation_test.png"></a></td>
+      <td><a href="results/Execution_test.png"><img src="results/Execution_test.png"></a></td>
+    </tr>
+  </table>
 
-  ![](results/Compilation_suite.png)
-  ![](results/Execution_suite.png)
+  <table>
+    <tr>
+      <td colspan="2" align="center">
+      <a href="benchmarks"><b>Suite</b></a> / <i>10'000 tests, 0 asserts, 100 cpp files</i>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="results/Compilation_suite.png"><img src="results/Compilation_suite.png"></a></td>
+      <td><a href="results/Execution_suite.png"><img src="results/Execution_suite.png"></a></td>
+    </tr>
+  </table>
 
-  ![](results/Compilation_suite+assert.png)
-  ![](results/Execution_suite+assert.png)
+  <table>
+    <tr>
+      <td colspan="2" align="center">
+      <a href="benchmarks"><b>Suite+Assert</b></a> / <i>10'000 tests, 20'200 asserts, 100 cpp files</i>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="results/Compilation_suite+assert.png"><img src="results/Compilation_suite+assert.png"></a></td>
+      <td><a href="results/Execution_suite+assert.png"><img src="results/Execution_suite+assert.png"></a></td>
+    </tr>
+  </table>
