@@ -2,10 +2,10 @@
 
 | Framework | Version | Configuration |
 |-|-|-|
-| **[GoogleTest](https://github.com/google/googletest)**     | **[1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0)** | - |
-| **[Catch](https://github.com/catchorg/Catch2)**            | **[2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp)** | `CATCH_CONFIG_FAST_COMPILE` |
-| **[Doctest](https://github.com/onqtam/doctest)**           | **[2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h)** | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` |
-| **[[Boost].μt](https://github.com/boost-experimental/ut)** | **[1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp)** | - |
+| **[GoogleTest](https://github.com/google/googletest)** | [1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0) | |
+| **[Catch](https://github.com/catchorg/Catch2)**        | [2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) | `CATCH_CONFIG_FAST_COMPILE` |
+| **[Doctest](https://github.com/onqtam/doctest)**       | [2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` |
+| **[μt](https://github.com/boost-experimental/ut)**     | [1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) | |
 
 <table>
   <tr>
