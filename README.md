@@ -26,12 +26,12 @@
   <table>
     <tr>
       <td colspan="2">
-      <a href="benchmarks"><b>include - 1 test, 1'000'000 asserts, 1 cpp file</b></a>
+      <center><a href="benchmarks"><b>Include</b></a> / 1 test, 1'000'000 asserts, 1 cpp file</center>
       </td>
     </tr>
     <tr>
-      <td><img src="results/Compilation_assert.png"></td>
-      <td><img src="results/Execution_assert.png"></td>
+      <td><a href="results/Compilation_assert.png"><img src="results/Compilation_assert.png"></a></td>
+      <td><a href="results/Execution_assert.png"><img src="results/Execution_assert.png"></a></td>
     </tr>
   </table>
 
