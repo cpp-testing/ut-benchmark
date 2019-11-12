@@ -2,10 +2,10 @@
 
 | Framework | Version | Config |
 |-|-|-|
-| Google Test | [1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0) | - |
-| Catch       | [2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) | `CATCH_CONFIG_FAST_COMPILE` |
-| DocTest     | [2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` |
-| μt          | [1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) | - |
+| **GoogleTest** | [1.10.0](https://github.com/google/googletest/releases/tag/release-1.10.0) | - |
+| **Catch**      | [2.10.2](https://github.com/catchorg/Catch2/releases/download/v2.10.2/catch.hpp) | `CATCH_CONFIG_FAST_COMPILE` |
+| **DocTest**    | [2.3.5](https://github.com/onqtam/doctest/blob/master/doctest/doctest.h) | `DOCTEST_CONFIG_SUPER_FAST_ASSERTS` |
+| **μt**         | [1.1.0](https://github.com/boost-experimental/ut/blob/master/include/boost/ut.hpp) | - |
 
 <table>
   <tr>
@@ -14,7 +14,7 @@
     </td>
   </tr>
   <tr>
-    <td><a href="results/Compilation_include.png"><img src="results/Compilation_include.png"></a></td>
+    <td colspan="2" align="center"><a href="results/Compilation_include.png"><img src="results/Compilation_include.png"></a></td>
     <td></td>
   </tr>
 
