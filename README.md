@@ -13,11 +13,11 @@
 
   | Test    | Description |
   | ------- | ----- |
-  | [include](https://github.com/cpp-testing/ut-benchmark)        | `0 tests, 0 asserts, 1 cpp file`              |
-  | [assert](https://github.com/cpp-testing/ut-benchmark)         | `1 test, 1'000'000 asserts, 1 cpp file`       |
-  | [test](https://github.com/cpp-testing/ut-benchmark)           | `1'000 tests, 0 asserts, 1 cpp file`          |
-  | [suite](https://github.com/cpp-testing/ut-benchmark)          | `10'000 tests, 0 asserts, 100 cpp files`      |
-  | [suite+assert](https://github.com/cpp-testing/ut-benchmark)   | `10'000 tests, 20'200 asserts, 100 cpp files` |
+  | [include](benchmarks)        | `0 tests, 0 asserts, 1 cpp file`              |
+  | [assert](benchmarks)         | `1 test, 1'000'000 asserts, 1 cpp file`       |
+  | [test](benchmarks)           | `1'000 tests, 0 asserts, 1 cpp file`          |
+  | [suite](benchmarks)          | `10'000 tests, 0 asserts, 100 cpp files`      |
+  | [suite+assert](benchmarks)   | `10'000 tests, 20'200 asserts, 100 cpp files` |
 
 * **Results**
 
