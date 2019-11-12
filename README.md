@@ -25,7 +25,9 @@
 
   <table>
     <tr>
-      include` | `1 test, 1'000'000 asserts, 1 cpp file`
+      <td colspan="2">
+      <a href="benchmarks"><b>include - 1 test, 1'000'000 asserts, 1 cpp file</b></a>
+      </td>
     </tr>
     <tr>
       <td><img src="results/Compilation_assert.png"></td>
