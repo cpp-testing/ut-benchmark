@@ -23,9 +23,15 @@
 
   ![](results/Compilation_include.png)
 
-  | `include` | `1 test, 1'000'000 asserts, 1 cpp file` |
-  |-|-|
-  | ![](results/Compilation_assert.png) | ![](results/Execution_assert.png) |
+  <table>
+    <tr>
+      include` | `1 test, 1'000'000 asserts, 1 cpp file`
+    </tr>
+    <tr>
+      <td><img src="results/Compilation_assert.png"></td>
+      <td><img src="results/Execution_assert.png"></td>
+    </tr>
+  </table>
 
   ![](results/Compilation_test.png)
   ![](results/Execution_test.png)
