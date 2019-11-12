@@ -11,6 +11,7 @@
 
 * **Benchmarks**
 
+  <center>
   <table>
     <tr>
       <td colspan="2" align="center">
@@ -22,6 +23,7 @@
       <td></td>
     </tr>
   </table>
+  </center>
 
   <table>
     <tr>
