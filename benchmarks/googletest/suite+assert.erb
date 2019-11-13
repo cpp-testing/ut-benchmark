@@ -4,7 +4,7 @@
   TEST(Suite<%= v %>, Test<%= i %>) {
     EXPECT_EQ(true, true);
     EXPECT_EQ(42, 42);
-    EXPECT_NEQ(1, 2);
-    EXPECT_NEAR(1.23f, 1.23f);
+    EXPECT_NE(1, 2);
+    EXPECT_NEAR(1.23f, 1.23f, 0.1);
   }
 <% end %>

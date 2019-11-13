@@ -362,6 +362,7 @@ extern auto operator<<(ostream& os, char) -> ostream&;
 extern auto operator<<(ostream& os, char const*) -> ostream&;
 extern auto operator<<(ostream& os, int) -> ostream&;
 extern auto operator<<(ostream& os, const utility::string_view) -> ostream&;
+extern auto operator<<(ostream& os, float) -> ostream&;
 #elif defined(BOOST_UT_IMPLEMENTATION)
 struct ostream : std::ostream {
   using std::ostream::ostream;
@@ -375,6 +376,10 @@ auto operator<<(ostream& os, char const* s) -> ostream& {
   return os;
 }
 auto operator<<(ostream& os, int s) -> ostream& {
+  static_cast<std::ostream&>(os) << s;
+  return os;
+}
+auto operator<<(ostream& os, float s) -> ostream& {
   static_cast<std::ostream&>(os) << s;
   return os;
 }
