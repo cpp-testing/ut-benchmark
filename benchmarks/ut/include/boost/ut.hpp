@@ -28,6 +28,19 @@ export import std;
 
 #if defined(BOOST_UT_INTERFACE)
 namespace std {
+template <class charT>
+struct char_traits;
+template <>
+struct char_traits<char>;
+template <class _Ty>
+class allocator;
+}
+namespace std::inline __cxx11 {
+template <class _Elem, class _Traits, class _Alloc>
+class basic_string;
+using string = basic_string<char, char_traits<char>, allocator<char>>;
+}
+namespace std {
 template <class TLhs, class TRhs>
 auto operator==(TLhs, TRhs) -> bool;
 template <class TLhs, class TRhs>
@@ -363,6 +376,7 @@ extern auto operator<<(ostream& os, char const*) -> ostream&;
 extern auto operator<<(ostream& os, int) -> ostream&;
 extern auto operator<<(ostream& os, const utility::string_view) -> ostream&;
 extern auto operator<<(ostream& os, float) -> ostream&;
+extern auto operator<<(ostream& os, std::string) -> ostream&;
 #elif defined(BOOST_UT_IMPLEMENTATION)
 struct ostream : std::ostream {
   using std::ostream::ostream;
@@ -385,6 +399,10 @@ auto operator<<(ostream& os, float s) -> ostream& {
 }
 auto operator<<(ostream& os, const utility::string_view s) -> ostream& {
   static_cast<std::ostream&>(os) << std::string_view{s};
+  return os;
+}
+auto operator<<(ostream& os, std::string  s) -> ostream& {
+  static_cast<std::ostream&>(os) << s;
   return os;
 }
 #endif
