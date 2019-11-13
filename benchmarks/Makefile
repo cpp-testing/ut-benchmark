@@ -1,4 +1,4 @@
-all: include.benchmark assert.benchmark test.benchmark suite.benchmark suite+assert.benchmark
+all: include.benchmark assert.benchmark test.benchmark suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark
 
 N?=100
 
@@ -19,7 +19,7 @@ N?=100
 	@time -f"$*:ut %e" ./a.out
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:ut"
 
-suite.benchmark suite+assert.benchmark:
+suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark:
 	@make $@.explicit
 
 %.benchmark.explicit:
