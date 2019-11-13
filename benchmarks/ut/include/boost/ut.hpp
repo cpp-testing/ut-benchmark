@@ -40,14 +40,6 @@ template <class TLhs, class TRhs>
 auto operator>(TLhs, TRhs) -> bool;
 template <class TLhs, class TRhs>
 auto operator>=(TLhs, TRhs) -> bool;
-template <class charT>
-struct char_traits;
-template <>
-struct char_traits<char>;
-template <class charT, class traits>
-class basic_ostream;
-typedef basic_ostream<char, char_traits<char>> ostream;
-template<class TOs, class T> auto operator<<(TOs&, T&&) -> TOs&;
 }  // namespace std
 #else
 #include <array>
@@ -69,7 +61,7 @@ namespace utility {
 class string_view {
  public:
   constexpr string_view() = default;
-  constexpr string_view(const char* data, unsigned long size)
+  constexpr string_view(const char* data, decltype(sizeof("")) size)
       : data_{data}, size_{size} {}
   template <auto N>
   constexpr string_view(const char (&data)[N]) : data_{data}, size_{N - 1} {}
@@ -87,7 +79,7 @@ class string_view {
 
  private:
   const char* data_{};
-  unsigned long size_{};
+  decltype(sizeof("")) size_{};
 };
 
 #if defined(BOOST_UT_INTERFACE) or defined(BOOST_UT_IMPLEMENTATION)
@@ -362,6 +354,36 @@ struct requires_<true> {
 template <bool Cond>
 using requires_t = typename requires_<Cond>::type;
 }  // namespace type_traits
+
+namespace io {
+#if defined(BOOST_UT_INTERFACE)
+struct ostream;
+extern auto operator<<(ostream& os, char) -> ostream&;
+extern auto operator<<(ostream& os, char const*) -> ostream&;
+extern auto operator<<(ostream& os, int) -> ostream&;
+extern auto operator<<(ostream& os, const utility::string_view) -> ostream&;
+#elif defined(BOOST_UT_IMPLEMENTATION)
+struct ostream : std::ostream {
+  using std::ostream::ostream;
+};
+auto operator<<(ostream& os, char s) -> ostream& {
+  static_cast<std::ostream&>(os) << s;
+  return os;
+}
+auto operator<<(ostream& os, char const* s) -> ostream& {
+  static_cast<std::ostream&>(os) << s;
+  return os;
+}
+auto operator<<(ostream& os, int s) -> ostream& {
+  static_cast<std::ostream&>(os) << s;
+  return os;
+}
+auto operator<<(ostream& os, const utility::string_view s) -> ostream& {
+  static_cast<std::ostream&>(os) << std::string_view{s};
+  return os;
+}
+#endif
+}  // namespace io
 
 #if not defined(BOOST_UT_INTERFACE)
 namespace colors {
@@ -783,7 +805,7 @@ assertion(TLocation, TExpr)->assertion<TLocation, TExpr>;
 #if defined(BOOST_UT_INTERFACE) or defined(BOOST_UT_IMPLEMENTATION)
 struct expr {
   bool result;
-  utility::function<std::ostream&(std::ostream&)> out;
+  utility::function<io::ostream&(io::ostream&)> out;
 };
 #endif
 template <class TLocation, class TExpr>
@@ -906,7 +928,7 @@ class reporter {
 #if defined(BOOST_UT_INTERFACE) or defined(BOOST_UT_IMPLEMENTATION)
   template <class TOs, class TExpr>
   constexpr void out(TOs& os, utility::function<TExpr>& expr) {
-    expr(reinterpret_cast<std::ostream&>(os));
+    expr(reinterpret_cast<io::ostream&>(os));
   }
 #endif
 
@@ -1152,7 +1174,7 @@ template <class..., class TLocation, class TExpr>
 [[nodiscard]] auto on(events::assertion<TLocation, TExpr> assertion) -> bool {
   return link::on(events::assertion<reflection::source_location, events::expr>{
       assertion.location,
-      {assertion.expr, [assertion](std::ostream& os) -> std::ostream& {
+      {assertion.expr, [assertion](io::ostream& os) -> io::ostream& {
          return (os << assertion.expr);
        }}});
 }
