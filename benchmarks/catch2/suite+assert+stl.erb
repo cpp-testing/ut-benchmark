@@ -1,0 +1,11 @@
+#define CATCH_CONFIG_FAST_COMPILE
+#include <catch.hpp>
+#include <string>
+#include <vector>
+
+<% (0..n).each do |i| %>
+  TEST_CASE("<%= v %>.<%= i %>") {
+    CHECK(std::string{"string"} == std::string{"string"});
+    CHECK(std::vector{1, 2, 3} == std::vector{1, 2, 3});
+  }
+<% end %>

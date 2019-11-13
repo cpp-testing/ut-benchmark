@@ -1,5 +1,7 @@
 #define BOOST_UT_INTERFACE
 #include <boost/ut.hpp>
+#include <string>
+#include <vector>
 
 namespace ut = boost::ut;
 
@@ -8,10 +10,8 @@ static ut::suite _ = [] {
 
   <% (0..n).each do |i| %>
     "test_suite_<%= v %>.<%= i %>"_test = [] {
-      expect(_b(true) == true);
-      expect(42_i == 42);
-      expect(1 != 2);
-      expect(1.23f == 1.23_f);
+      expect(std::string{"string"} == std::string{"string"});
+      expect(std::vector{1, 2, 3} == std::vector{1, 2, 3});
 		};
   <% end %>
 };
