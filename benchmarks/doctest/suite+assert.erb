@@ -2,7 +2,7 @@
 #define DOCTEST_CONFIG_SUPER_FAST_ASSERTS
 #include <doctest.h>
 
-<% (0..n).each do |i| %>
+<% (1..n).each do |i| %>
   TEST_CASE("<%= v %>.<%= i %>") {
     CHECK(true == true);
     CHECK(42 == 42);

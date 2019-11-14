@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-<% (0..n).each do |i| %>
+<% (1..n).each do |i| %>
   TEST(Suite<%= v %>, Test<%= i %>) {
     EXPECT_EQ(true, true);
     EXPECT_EQ(42, 42);

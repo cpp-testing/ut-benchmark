@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-<% (0..n).each do |i| %>
+<% (1..n).each do |i| %>
   TEST(Suite<%= v %>, Test<%= i %>) {
     EXPECT_EQ(std::string{"string"}, std::string{"string"});
     EXPECT_EQ((std::vector{1, 2, 3}), (std::vector{1, 2, 3}));
