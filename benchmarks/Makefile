@@ -1,7 +1,10 @@
 N?=100
 
-all: include.benchmark assert.benchmark test.benchmark suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark ut.suite+assert+stl.benchmark
-	make clean
+all: include.benchmark assert.benchmark test.benchmark suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark
+	@make clean
+
+ut:	ut.suite+assert+stl.benchmark
+	@make clean
 
 %.benchmark: clean
 	@time -f"$*:googletest %e" $(CXX) $(CXXFLAGS) -I googletest/include googletest/$*.cpp googletest/lib/libgtest_main.a googletest/lib/libgtest.a -lpthread

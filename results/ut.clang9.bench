@@ -1,0 +1,26 @@
+make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+suite+assert+stl:ut.header 103.56
+[32mAll tests passed[0m (20000 asserts in 10000 tests)
+suite+assert+stl:ut.header 0.05
+suite+assert+stl:ut.header 11368184
+make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+suite+assert+stl:ut.pch 61.06
+[32mAll tests passed[0m (20000 asserts in 10000 tests)
+suite+assert+stl:ut.pch 0.05
+suite+assert+stl:ut.pch 11368184
+make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+suite+assert+stl:ut.module 59.86
+[32mAll tests passed[0m (20000 asserts in 10000 tests)
+suite+assert+stl:ut.module 0.04
+suite+assert+stl:ut.module 11368184
+make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
+make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
