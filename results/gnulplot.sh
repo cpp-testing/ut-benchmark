@@ -68,3 +68,6 @@ plot suite "time [s]" Execution 2
 
 plot suite+assert "time [s]" Compilation 1
 plot suite+assert "time [s]" Execution 2
+
+plot suite+assert+stl "time [s]" Compilation 1
+plot suite+assert+stl "time [s]" Execution 2
