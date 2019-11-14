@@ -5,7 +5,7 @@ function plot {
   echo -n "googletest-1.10.0 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
-  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo  -n '' >> /tmp/file
+  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo '' >> /tmp/file
@@ -13,7 +13,7 @@ function plot {
   echo -n "catch2-2.10.2 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
-  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo  -n '' >> /tmp/file
+  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo '' >> /tmp/file
@@ -21,7 +21,7 @@ function plot {
   echo -n "doctest-2.3.5 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
-  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo  -n '' >> /tmp/file
+  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo '' >> /tmp/file
@@ -29,7 +29,7 @@ function plot {
   echo -n "ut-1.1.0 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
-  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo  -n '' >> /tmp/file
+  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo '' >> /tmp/file
@@ -58,17 +58,17 @@ function plot_ut {
   echo -n "ut.header " >> /tmp/file
   grep "^$1:" ut.clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" ut.clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
-  grep "^$1:" ut.clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo  -n '' >> /tmp/file
+  grep "^$1:" ut.clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo '' >> /tmp/file
 
   echo -n "ut.pch " >> /tmp/file
   grep "^$1:" ut.clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" ut.clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
-  grep "^$1:" ut.clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo  -n '' >> /tmp/file
+  grep "^$1:" ut.clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo '' >> /tmp/file
 
   echo -n "ut.module " >> /tmp/file
   grep "^$1:" ut.clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" ut.clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
-  grep "^$1:" ut.clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo  -n '' >> /tmp/file
+  grep "^$1:" ut.clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo '' >> /tmp/file
 
   gnuplot << EOF
     set tmargin 5
