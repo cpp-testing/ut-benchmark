@@ -70,7 +70,7 @@
 
   <tr>
     <td colspan="2" align="center">
-    <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Suite+Assert+STL</b></a> / <i>10'000 tests, 20'000 asserts, 100 cpp files (Headers vs Precompiled headers vs C++20 Modules)</i>
+    <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Suite+Assert+STL</b></a> / <i>10'000 tests, 20'000 asserts, 100 cpp files<br/>(Headers vs Precompiled headers vs C++20 Modules)</i>
     </td>
   </tr>
   <tr>
