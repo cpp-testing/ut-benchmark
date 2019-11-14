@@ -5,3 +5,5 @@ CXX=clang++ CXXFLAGS="-O2 -std=c++2a --gcc-toolchain=/usr/lib/gcc9/9.2.0" make &
 CXX=g++ CXXFLAGS="-std=c++2a" make &> gcc9.bench
 CXX=g++ CXXFLAGS="-g -std=c++2a" make &> gcc9.debug.bench
 CXX=g++ CXXFLAGS="-O2 -std=c++2a" make &> gcc9.release.bench
+
+make clean
