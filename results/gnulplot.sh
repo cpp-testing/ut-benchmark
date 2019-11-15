@@ -92,21 +92,28 @@ EOF
 rm -f *.png
 
 plot include "time [s]" Compilation 1
+plot include "size [b]" BinarySize 3
 
 plot assert "time [s]" Compilation 1
 plot assert "time [s]" Execution 2
+plot assert "size [b]" BinarySize 3
 
 plot test "time [s]" Compilation 1
 plot test "time [s]" Execution 2
+plot test "size [b]" BinarySize 3
 
 plot suite "time [s]" Compilation 1
 plot suite "time [s]" Execution 2
+plot suite "size [b]" BinarySize 3
 
 plot suite+assert "time [s]" Compilation 1
 plot suite+assert "time [s]" Execution 2
+plot suite+assert "size [b]" BinarySize 3
 
 plot suite+assert+stl "time [s]" Compilation 1
 plot suite+assert+stl "time [s]" Execution 2
+plot suite+assert+stl "size [b]" BinarySize 3
 
 plot_ut suite+assert+stl "time [s]" Compilation 1
 plot_ut suite+assert+stl "time [s]" Execution 2
+plot_ut suite+assert+stl "size [b]" BinarySize 3
