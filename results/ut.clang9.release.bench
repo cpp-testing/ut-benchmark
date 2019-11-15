@@ -2,25 +2,22 @@ make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert+stl:ut.header 302.15
-[32mAll tests passed[0m (20000 asserts in 10000 tests)
-suite+assert+stl:ut.header 0.01
+suite+assert+stl:ut.header 296.23
+suite+assert+stl:ut.header 0.013690115
 suite+assert+stl:ut.header 11540592
 make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert+stl:ut.pch 261.87
-[32mAll tests passed[0m (20000 asserts in 10000 tests)
-suite+assert+stl:ut.pch 0.01
+suite+assert+stl:ut.pch 255.51
+suite+assert+stl:ut.pch 0.020944125
 suite+assert+stl:ut.pch 11540592
 make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert+stl:ut.module 261.85
-[32mAll tests passed[0m (20000 asserts in 10000 tests)
-suite+assert+stl:ut.module 0.02
+suite+assert+stl:ut.module 255.54
+suite+assert+stl:ut.module 0.019825750
 suite+assert+stl:ut.module 11540592
 make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
 make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
