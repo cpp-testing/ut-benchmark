@@ -9,17 +9,17 @@
 
 <table>
   <tr>
-    <td colspan="2" align="center">
+    <td colspan="3" align="center">
     <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Include</b></a> / <i>0 tests, 0 asserts, 1 cpp file</i>
     </td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_include.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_include.png"></a></td>
+    <td colspan="3" align="center"><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_include.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/Compilation_include.png"></a></td>
     <td></td>
   </tr>
 
   <tr>
-    <td colspan="2" align="center">
+    <td colspan="3" align="center">
     <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Assert</b></a> / <i>1 test, 1'000'000 asserts, 1 cpp file</i>
     </td>
   </tr>
@@ -30,7 +30,7 @@
   </tr>
 
   <tr>
-    <td colspan="2" align="center">
+    <td colspan="3" align="center">
     <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Test</b></a> / <i>1'000 tests, 0 asserts, 1 cpp file</i>
     </td>
   </tr>
@@ -41,7 +41,7 @@
   </tr>
 
   <tr>
-    <td colspan="2" align="center">
+    <td colspan="3" align="center">
     <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Suite</b></a> / <i>10'000 tests, 0 asserts, 100 cpp files</i>
     </td>
   </tr>
@@ -52,7 +52,7 @@
   </tr>
 
   <tr>
-    <td colspan="2" align="center">
+    <td colspan="3" align="center">
     <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Suite+Assert</b></a> / <i>10'000 tests, 40'000 asserts, 100 cpp files</i>
     </td>
   </tr>
@@ -63,7 +63,7 @@
   </tr>
 
   <tr>
-    <td colspan="2" align="center">
+    <td colspan="3" align="center">
     <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Suite+Assert+STL</b></a> / <i>10'000 tests, 20'000 asserts, 100 cpp files</i>
     </td>
   </tr>
@@ -74,7 +74,7 @@
   </tr>
 
   <tr>
-    <td colspan="2" align="center">
+    <td colspan="3" align="center">
     <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Suite+Assert+STL</b></a> / <i>10'000 tests, 20'000 asserts, 100 cpp files<br/>(Headers vs Precompiled headers vs C++20 Modules)</i>
     </td>
   </tr>
