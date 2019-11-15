@@ -1,3 +1,4 @@
+.SILENT:
 N?=100
 TIME=perf stat --metric-only ./a.out 2>&1 | grep seconds | cut -d' ' -f8 | xargs echo
 
