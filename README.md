@@ -84,3 +84,12 @@
     <td><a href="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/ut_BinarySize_suite+assert+stl.png"><img src="https://raw.githubusercontent.com/cpp-testing/ut-benchmark/master/results/ut_BinarySize_suite+assert+stl.png"></a></td>
   </tr>
 </table>
+
+---
+
+#### To run benchmarks
+
+```
+cd benchmarks
+./bench.sh
+```
