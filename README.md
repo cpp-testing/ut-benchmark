@@ -90,6 +90,5 @@
 #### To run benchmarks
 
 ```
-cd benchmarks
-./bench.sh
+cd benchmarks && ./bench.sh
 ```
