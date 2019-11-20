@@ -36,7 +36,7 @@ function plot {
 
   gnuplot << EOF
     set tmargin 5
-    set title '$3 / $1 (smaller is better)'
+    set title '$3 / $1 (lower is better)'
     set title font ",16"
     set ylabel "$2"
     set terminal png
@@ -72,7 +72,7 @@ function plot_ut {
 
   gnuplot << EOF
     set tmargin 5
-    set title '$3 / $1 (smaller is better)'
+    set title '$3 / $1 (lower is better)'
     set title font ",16"
     set ylabel "$2"
     set terminal png
