@@ -1,0 +1,12 @@
+#include <boost/test/unit_test.hpp>
+
+struct suite_assert {};
+
+<% (1..n).each do |i| %>
+  BOOST_FIXTURE_TEST_CASE(test_<%= v %><%= i %>, suite_assert) {
+    BOOST_TEST(true == true);
+    BOOST_TEST(42 == 42);
+    BOOST_TEST(1 != 2);
+    BOOST_TEST(1.23f == 1.23, boost::test_tools::tolerance(0.1));
+  }
+<% end %>

@@ -9,8 +9,8 @@ ut:	ut.suite+assert+stl.benchmark
 	@make clean
 
 %.benchmark: clean
-	@time -f"$*:boost.test %e" $(CXX) $(CXXFLAGS) -I boost/include boost/$*.cpp
-	@$(TIME) $*boost.test:
+	@time -f"$*:boost.test %e" $(CXX) $(CXXFLAGS) -I boost.test/include boost.test/main.cpp boost.test/$*.cpp boost.test/lib/libboost_unit_test_framework.a
+	@$(TIME) $*:boost.test:
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:boost.test"
 
 	@time -f"$*:googletest %e" $(CXX) $(CXXFLAGS) -I googletest/include googletest/$*.cpp googletest/lib/libgtest_main.a googletest/lib/libgtest.a -lpthread
@@ -64,7 +64,7 @@ suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark:
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:ut"
 
 suite.compile.boost.test:
-	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I boost/include -c boost.test_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS)
+	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I boost.test/include -c boost.test_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I boost.test/include boost.test/main.cpp boost.test/lib/libboost_unit_test_framework.a *.o
 
 suite.compile.googletest:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I googletest/include -c googletest_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -lpthread googletest/lib/libgtest_main.a googletest/lib/libgtest.a *.o
