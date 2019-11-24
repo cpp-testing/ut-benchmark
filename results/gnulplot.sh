@@ -56,7 +56,7 @@ function plot {
     set style fill transparent solid 1.0 noborder
     set style data histogram
     set xtics rotate by 45 right
-    set xrange [0.3:4.7]
+    set xrange [0.3:5.7]
     set offsets 0, 0, 0.01, 0
     plot "/tmp/file" using 2:xticlabels(1) title 'clang9', '' u 3 title 'clang9.debug', '' u 4 title 'clang9.release', '' u 5 title 'gcc9', '' u 6 title 'gcc9.debug', '' u 7 title 'gcc9.release'
 EOF

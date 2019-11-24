@@ -9,7 +9,7 @@ ut:	ut.suite+assert+stl.benchmark
 	@make clean
 
 %.benchmark: clean
-	@time -f"$*:boost.test %e" $(CXX) $(CXXFLAGS) -I boost.test/include boost.test/main.cpp boost.test/$*.cpp boost.test/lib/libboost_unit_test_framework.a
+	@time -f"$*:boost.test %e" $(CXX) $(CXXFLAGS) -I boost.test/include boost.test/$*.cpp boost.test/lib/libboost_unit_test_framework.a
 	@$(TIME) $*:boost.test:
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:boost.test"
 
