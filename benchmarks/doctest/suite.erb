@@ -2,7 +2,7 @@
 #define DOCTEST_CONFIG_SUPER_FAST_ASSERTS
 #include <doctest.h>
 
-TEST_CASE("suite") {
+TEST_CASE("suite.<%= v %>") {
   <% (1..n).each do |i| %>
     SUBCASE("<%= v %>.<%= i %>") { }
   <% end %>

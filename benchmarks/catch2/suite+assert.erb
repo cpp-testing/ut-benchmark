@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_FAST_COMPILE
 #include <catch.hpp>
 
-TEST_CASE("suite+assert") {
+TEST_CASE("suite+assert.<%= v %>") {
   <% (1..n).each do |i| %>
     SECTION("<%= v %>.<%= i %>") {
       CHECK(true == true);

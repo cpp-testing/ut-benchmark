@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-TEST_CASE("suite+assert+stl") {
+TEST_CASE("suite+assert+stl.<%= v %>") {
   <% (1..n).each do |i| %>
     SECTION("<%= v %>.<%= i %>") {
       CHECK(std::string{"string"} == std::string{"string"});
