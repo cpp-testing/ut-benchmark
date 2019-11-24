@@ -1,128 +1,90 @@
-include:googletest 0.87
-include:googletest 0.005722631
+include:boost.test 1.87
+include:boost.test: 0.003799321
+include:boost.test 843312
+include:googletest 0.75
+include:googletest 0.004083235
 include:googletest 826224
-include:catch2 16.10
-include:catch2 0.003170074
+include:catch2 16.59
+include:catch2 0.003364416
 include:catch2 944408
 include:doctest 3.10
-include:doctest 0.005383151
+include:doctest 0.005300962
 include:doctest 176080
-include:ut 0.36
-include:ut 0.004921877
+include:ut 0.37
+include:ut 0.002214365
 include:ut 16640
-assert:googletest 0.85
-assert:googletest 0.024994767
-assert:googletest 831920
-assert:catch2 16.11
-assert:catch2 0.014602637
+assert:boost.test 2.02
+assert:boost.test: 0.293160621
+assert:boost.test 849400
+assert:googletest 0.84
+assert:googletest 0.030846252
+assert:googletest 831896
+assert:catch2 16.34
+assert:catch2 0.015145063
 assert:catch2 949088
-assert:doctest 3.12
-assert:doctest 0.031310069
+assert:doctest 3.19
+assert:doctest 0.026956305
 assert:doctest 180584
-assert:ut 0.56
-assert:ut 0.005104055
+assert:ut 0.58
+assert:ut 0.002521865
 assert:ut 28816
-test:googletest 16.99
-test:googletest 0.039582965
-test:googletest 2607552
-test:catch2 19.97
-test:catch2 0.020343705
+test:boost.test 58.13
+test:boost.test: 0.117194262
+test:boost.test 3498720
+test:googletest 16.55
+test:googletest 0.032087179
+test:googletest 2592456
+test:catch2 20.60
+test:catch2 0.015804613
 test:catch2 1269056
-test:doctest 12.93
-test:doctest 0.018849231
+test:doctest 12.86
+test:doctest 0.020212897
 test:doctest 602344
-test:ut 2.16
-test:ut 0.004872044
+test:ut 2.17
+test:ut 0.002519664
 test:ut 211728
-make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite:googletest 173.65
-suite:googletest 0.081713620
-suite:googletest 18399344
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite:catch2 111.54
-suite:catch2 0.119867868
-suite:catch2 4225368
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite:doctest 27.43
-suite:doctest 0.114236660
-suite:doctest 1879720
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite:ut 33.00
-suite:ut 0.005606119
+suite:boost.test 420.58
+suite:boost.test 1.148661537
+suite:boost.test 27216216
+suite:googletest 173.81
+suite:googletest 0.063981034
+suite:googletest 18566704
+suite:catch2 113.29
+suite:catch2 0.005156312
+suite:catch2 3798512
+suite:doctest 13.24
+suite:doctest 0.131398718
+suite:doctest 879856
+suite:ut 32.86
+suite:ut 0.010450738
 suite:ut 2517864
-make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert:googletest 342.25
-suite+assert:googletest 0.097967820
-suite+assert:googletest 28561744
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert:catch2 393.38
-suite+assert:catch2 0.108660681
-suite+assert:catch2 25844064
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert:doctest 83.02
-suite+assert:doctest 0.116353060
-suite+assert:doctest 8446824
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert:ut 115.05
-suite+assert:ut 0.014476334
+suite+assert:boost.test 627.86
+suite+assert:boost.test 1.201098126
+suite+assert:boost.test 42480496
+suite+assert:googletest 347.49
+suite+assert:googletest 0.110914666
+suite+assert:googletest 29549008
+suite+assert:catch2 845.31
+suite+assert:catch2 0.003145732
+suite+assert:catch2 25773792
+suite+assert:doctest 108.51
+suite+assert:doctest 0.174102576
+suite+assert:doctest 7602520
+suite+assert:ut 115.33
+suite+assert:ut 0.012100504
 suite+assert:ut 7939984
-make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert+stl:googletest 364.09
-suite+assert+stl:googletest 0.097746678
-suite+assert+stl:googletest 29031592
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert+stl:catch2 366.55
-suite+assert+stl:catch2 0.133045107
-suite+assert+stl:catch2 20888040
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert+stl:doctest 140.47
-suite+assert+stl:doctest 0.095414485
-suite+assert+stl:doctest 9348784
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[2]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-suite+assert+stl:ut 216.50
-suite+assert+stl:ut 0.019643752
+suite+assert+stl:boost.test 642.71
+suite+assert+stl:boost.test 1.219333748
+suite+assert+stl:boost.test 43279920
+suite+assert+stl:googletest 366.96
+suite+assert+stl:googletest 0.090551889
+suite+assert+stl:googletest 30348872
+suite+assert+stl:catch2 564.99
+suite+assert+stl:catch2 0.006797742
+suite+assert+stl:catch2 20047696
+suite+assert+stl:doctest 149.92
+suite+assert+stl:doctest 0.165534268
+suite+assert+stl:doctest 8012984
+suite+assert+stl:ut 219.80
+suite+assert+stl:ut 0.018274746
 suite+assert+stl:ut 12045816
-make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[1]: Entering directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
-make[1]: Leaving directory `/home/kjusiak/projects/ut-benchmark/benchmarks'
