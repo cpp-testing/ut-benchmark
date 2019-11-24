@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
 
+class Suite : public ::testing::Test { };
+
 <% (1..n).each do |i| %>
-  TEST(Suite<%= v %>, Test<%= i %>) { }
+  TEST_F(Suite, Test<%= v %><%= i %>) { }
 <% end %>

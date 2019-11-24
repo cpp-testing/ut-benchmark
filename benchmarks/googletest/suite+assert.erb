@@ -1,7 +1,9 @@
 #include <gtest/gtest.h>
 
+class SuiteAssert : public ::testing::Test { };
+
 <% (1..n).each do |i| %>
-  TEST(Suite<%= v %>, Test<%= i %>) {
+  TEST_F(SuiteAssert, Test<%= v %><%= i %>) {
     EXPECT_EQ(true, true);
     EXPECT_EQ(42, 42);
     EXPECT_NE(1, 2);

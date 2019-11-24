@@ -9,6 +9,10 @@ ut:	ut.suite+assert+stl.benchmark
 	@make clean
 
 %.benchmark: clean
+	@time -f"$*:boost.test %e" $(CXX) $(CXXFLAGS) -I boost/include boost/$*.cpp
+	@$(TIME) $*boost.test:
+	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:boost.test"
+
 	@time -f"$*:googletest %e" $(CXX) $(CXXFLAGS) -I googletest/include googletest/$*.cpp googletest/lib/libgtest_main.a googletest/lib/libgtest.a -lpthread
 	@$(TIME) $*:googletest
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:googletest"
@@ -29,6 +33,12 @@ suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark:
 	@make $@.explicit
 
 %.benchmark.explicit:
+	@make clean
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat boost.test/$*.erb) | erb > boost.test_suite_$$v.cpp; done
+	@time -f"$*:boost.test %e" make suite.compile.boost.test
+	@$(TIME) $*:boost.test
+	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:boost.test"
+
 	@make clean
 	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat googletest/$*.erb) | erb > googletest_suite_$$v.cpp; done
 	@time -f"$*:googletest %e" make suite.compile.googletest
@@ -52,6 +62,9 @@ suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark:
 	@time -f"$*:ut %e" make suite.compile.ut
 	@$(TIME) $*:ut
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:ut"
+
+suite.compile.boost.test:
+	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I boost/include -c boost.test_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS)
 
 suite.compile.googletest:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I googletest/include -c googletest_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -lpthread googletest/lib/libgtest_main.a googletest/lib/libgtest.a *.o

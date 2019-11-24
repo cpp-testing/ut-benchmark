@@ -2,7 +2,8 @@
 
 function plot {
   echo "Framework clang9 clang9.debug clang9.release gcc9 gcc9.debug gcc9.release" > /tmp/file
-  echo -n "googletest-1.10.0 " >> /tmp/file
+
+  echo -n "boost.test-1.71.0 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
@@ -10,7 +11,7 @@ function plot {
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -1 | tail -1 | xargs echo '' >> /tmp/file
 
-  echo -n "catch2-2.10.2 " >> /tmp/file
+  echo -n "googletest-1.10.0 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
@@ -18,7 +19,7 @@ function plot {
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -2 | tail -1 | xargs echo '' >> /tmp/file
 
-  echo -n "doctest-2.3.5 " >> /tmp/file
+  echo -n "catch2-2.10.2 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
@@ -26,13 +27,21 @@ function plot {
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -3 | tail -1 | xargs echo '' >> /tmp/file
 
-  echo -n "ut-1.1.0 " >> /tmp/file
+  echo -n "doctest-2.3.5 " >> /tmp/file
   grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n >> /tmp/file
   grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo -n '' >> /tmp/file
   grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -4 | tail -1 | xargs echo '' >> /tmp/file
+
+  echo -n "ut-1.1.0 " >> /tmp/file
+  grep "^$1:" clang9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -5 | tail -1 | xargs echo -n >> /tmp/file
+  grep "^$1:" clang9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -5 | tail -1 | xargs echo -n '' >> /tmp/file
+  grep "^$1:" clang9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -5 | tail -1 | xargs echo -n '' >> /tmp/file
+  grep "^$1:" gcc9.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -5 | tail -1 | xargs echo -n '' >> /tmp/file
+  grep "^$1:" gcc9.debug.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -5 | tail -1 | xargs echo -n '' >> /tmp/file
+  grep "^$1:" gcc9.release.bench | cut -d' ' -f2 | xargs -n3 | cut -d' ' -f$4 | head -5 | tail -1 | xargs echo '' >> /tmp/file
 
   gnuplot << EOF
     set tmargin 5

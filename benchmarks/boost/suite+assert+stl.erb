@@ -1,0 +1,13 @@
+#define BOOST_TEST_MODULE SuiteAssertStlModule
+#include <boost/test/unit_test.hpp>
+#include <string>
+#include <vector>
+
+struct SuiteAssertStl {};
+
+<% (1..n).each do |i| %>
+  BOOST_FIXTURE_TEST_CASE(test_<%= v %><%= i %>, SuiteAssertStl) {
+    BOOST_CHECK(std::string{"string"} == std::string{"string"});
+    BOOST_CHECK(std::vector{1, 2, 3} == std::vector{1, 2, 3});
+  }
+<% end %>

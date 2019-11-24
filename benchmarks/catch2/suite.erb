@@ -1,6 +1,8 @@
 #define CATCH_CONFIG_FAST_COMPILE
 #include <catch.hpp>
 
-<% (1..n).each do |i| %>
-  TEST_CASE("<%= v %>.<%= i %>") { }
-<% end %>
+TEST_CASE("suite") {
+  <% (1..n).each do |i| %>
+    SECTION("<%= v %>.<%= i %>") { }
+  <% end %>
+}

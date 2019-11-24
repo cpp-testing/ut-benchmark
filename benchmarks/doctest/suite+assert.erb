@@ -2,11 +2,13 @@
 #define DOCTEST_CONFIG_SUPER_FAST_ASSERTS
 #include <doctest.h>
 
-<% (1..n).each do |i| %>
-  TEST_CASE("<%= v %>.<%= i %>") {
-    CHECK(true == true);
-    CHECK(42 == 42);
-    CHECK(1 != 2);
-    CHECK(1.23f == doctest::Approx(1.23));
-  }
-<% end %>
+TEST_CASE("suite+assert") {
+  <% (1..n).each do |i| %>
+    SUBCASE("<%= v %>.<%= i %>") {
+      CHECK(true == true);
+      CHECK(42 == 42);
+      CHECK(1 != 2);
+      CHECK(1.23f == doctest::Approx(1.23));
+    }
+  <% end %>
+}

@@ -1,0 +1,8 @@
+#define BOOST_TEST_MODULE SuiteModule
+#include <boost/test/unit_test.hpp>
+
+struct Suite {};
+
+<% (1..n).each do |i| %>
+  BOOST_FIXTURE_TEST_CASE(test_<%= v %><%= i %>, Suite) { }
+<% end %>

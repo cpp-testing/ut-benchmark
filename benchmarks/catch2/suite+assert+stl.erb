@@ -3,9 +3,11 @@
 #include <string>
 #include <vector>
 
-<% (1..n).each do |i| %>
-  TEST_CASE("<%= v %>.<%= i %>") {
-    CHECK(std::string{"string"} == std::string{"string"});
-    CHECK(std::vector{1, 2, 3} == std::vector{1, 2, 3});
-  }
-<% end %>
+TEST_CASE("suite+assert+stl") {
+  <% (1..n).each do |i| %>
+    TEST_CASE("<%= v %>.<%= i %>") {
+      CHECK(std::string{"string"} == std::string{"string"});
+      CHECK(std::vector{1, 2, 3} == std::vector{1, 2, 3});
+    }
+  <% end %>
+}
