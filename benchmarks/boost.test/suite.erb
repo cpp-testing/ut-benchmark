@@ -3,5 +3,5 @@
 struct suite {};
 
 <% (1..n).each do |i| %>
-  BOOST_FIXTURE_TEST_CASE(test_<%= v %><%= i %>, suite) { }
+  BOOST_FIXTURE_TEST_CASE(test_<%= v %>_<%= i %>, suite) { }
 <% end %>

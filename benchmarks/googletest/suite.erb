@@ -3,5 +3,5 @@
 class Suite : public ::testing::Test { };
 
 <% (1..n).each do |i| %>
-  TEST_F(Suite, Test<%= v %><%= i %>) { }
+  TEST_F(Suite, Test<%= v %>_<%= i %>) { }
 <% end %>

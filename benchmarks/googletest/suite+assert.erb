@@ -3,7 +3,7 @@
 class SuiteAssert : public ::testing::Test { };
 
 <% (1..n).each do |i| %>
-  TEST_F(SuiteAssert, Test<%= v %><%= i %>) {
+  TEST_F(SuiteAssert, Test<%= v %>_<%= i %>) {
     EXPECT_EQ(true, true);
     EXPECT_EQ(42, 42);
     EXPECT_NE(1, 2);
