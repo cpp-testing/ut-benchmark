@@ -123,6 +123,10 @@ plot suite+assert+stl "time [s]" Compilation 1
 plot suite+assert+stl "time [s]" Execution 2
 plot suite+assert+stl "size [b]" BinarySize 3
 
+plot incremental.suite+assert+stl "time [s]" Compilation 1
+plot incremental.suite+assert+stl "time [s]" Execution 2
+plot incremental.suite+assert+stl "size [b]" BinarySize 3
+
 plot_ut suite+assert+stl "time [s]" Compilation 1
 plot_ut suite+assert+stl "time [s]" Execution 2
 plot_ut suite+assert+stl "size [b]" BinarySize 3

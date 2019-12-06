@@ -6,7 +6,7 @@ struct suite_assert_stl {};
 
 <% (1..n).each do |i| %>
   BOOST_FIXTURE_TEST_CASE(test_<%= v %>_<%= i %>, suite_assert_stl) {
-    BOOST_TEST(std::string{"string"} == std::string{"string"});
+    BOOST_TEST(std::string{"pass"} == std::string{"<%= match %>"});
     BOOST_TEST((std::vector{1, 2, 3}) == (std::vector{1, 2, 3}));
   }
 <% end %>

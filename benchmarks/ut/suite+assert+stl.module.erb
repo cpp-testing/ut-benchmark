@@ -8,7 +8,7 @@ static ut::suite _ = [] {
 
   <% (1..n).each do |i| %>
     "test_suite_<%= v %>.<%= i %>"_test = [] {
-      expect(std::string{"string"} == std::string{"string"});
+      expect(std::string{"pass"} == std::string{"<%= match %>"});
       expect(std::vector{1, 2, 3} == std::vector{1, 2, 3});
 		};
   <% end %>

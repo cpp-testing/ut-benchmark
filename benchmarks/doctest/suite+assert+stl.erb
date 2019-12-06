@@ -7,7 +7,7 @@
 TEST_CASE("suite+assert+stl.<%= v %>") {
   <% (1..n).each do |i| %>
     SUBCASE("<%= v %>.<%= i %>") {
-      CHECK(std::string{"string"} == std::string{"string"});
+      CHECK(std::string{"pass"} == std::string{"<%= match %>"});
       CHECK(std::vector{1, 2, 3} == std::vector{1, 2, 3});
     }
   <% end %>

@@ -6,7 +6,7 @@ class SuiteAssertStl : public ::testing::Test { };
 
 <% (1..n).each do |i| %>
   TEST_F(SuiteAssertStl, Test<%= v %>_<%= i %>) {
-    EXPECT_EQ(std::string{"string"}, std::string{"string"});
+    EXPECT_EQ(std::string{"pass"}, std::string{"<%= match %>"});
     EXPECT_EQ((std::vector{1, 2, 3}), (std::vector{1, 2, 3}));
   }
 <% end %>

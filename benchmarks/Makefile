@@ -1,5 +1,6 @@
 .SILENT:
 N?=100
+I?=42
 TIME=perf stat --metric-only ./a.out 2>&1 | grep seconds | cut -d' ' -f8 | xargs echo
 
 all: include.benchmark assert.benchmark test.benchmark suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark
@@ -34,49 +35,83 @@ suite.benchmark suite+assert.benchmark suite+assert+stl.benchmark:
 
 %.benchmark.explicit:
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat boost.test/$*.erb) | erb > boost.test_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat boost.test/$*.erb) | erb > boost.test_suite_$$v.cpp; done
 	@time -f"$*:boost.test %e" make suite.compile.boost.test
 	@$(TIME) $*:boost.test
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:boost.test"
+	@make incremental.boost.test.$*.benchmark
 
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat googletest/$*.erb) | erb > googletest_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat googletest/$*.erb) | erb > googletest_suite_$$v.cpp; done
 	@time -f"$*:googletest %e" make suite.compile.googletest
 	@$(TIME) $*:googletest
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:googletest"
+	@make incremental.googletest.$*.benchmark
 
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat catch2/$*.erb) | erb > catch2_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat catch2/$*.erb) | erb > catch2_suite_$$v.cpp; done
 	@time -f"$*:catch2 %e" make suite.compile.catch2
 	@$(TIME) $*:catch2
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:catch2"
+	@make incremental.catch2.$*.benchmark
 
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat doctest/$*.erb) | erb > doctest_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat doctest/$*.erb) | erb > doctest_suite_$$v.cpp; done
 	@time -f"$*:doctest %e" make suite.compile.doctest
 	@$(TIME) $*:doctest
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:doctest"
+	@make incremental.doctest.$*.benchmark
 
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat ut/$*.erb) | erb > ut_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat ut/$*.erb) | erb > ut_suite_$$v.cpp; done
 	@time -f"$*:ut %e" make suite.compile.ut
 	@$(TIME) $*:ut
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:ut"
+	@make incremental.ut.$*.benchmark
+
+incremental.%:
+	
+
+incremental.%.suite+assert+stl.benchmark:
+	(echo '<% n=$(N); v=$(I); match="fail"; %>' && cat $*/suite+assert+stl.erb) | erb > $*_suite_$(I).cpp
+	@time -f"incremental.suite+assert+stl:$* %e" make suite.compile.$*.$(I)
+	@$(TIME) incremental.suite+assert+stl:$*
+	@ls -l a.out | cut -d' ' -f6 | xargs echo "incremental.suite+assert+stl:$*"
 
 suite.compile.boost.test:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I boost.test/include -c boost.test_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I boost.test/include boost.test/main.cpp boost.test/lib/libboost_unit_test_framework.a *.o
 
+suite.compile.boost.test.%:
+	$(CXX) $(CXXFLAGS) -I boost.test/include -c boost.test_suite_$*.cpp
+	$(CXX) $(CXXFLAGS) -I boost.test/include boost.test/main.cpp boost.test/lib/libboost_unit_test_framework.a *.o
+
 suite.compile.googletest:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I googletest/include -c googletest_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -lpthread googletest/lib/libgtest_main.a googletest/lib/libgtest.a *.o
+
+suite.compile.googletest.%:
+	$(CXX) $(CXXFLAGS) -I googletest/include -c googletest_suite_$*.cpp
+	$(CXX) $(CXXFLAGS) -lpthread googletest/lib/libgtest_main.a googletest/lib/libgtest.a *.o
 
 suite.compile.catch2:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I catch2/include -c catch2_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I catch2/include catch2/main.cpp *.o
 
+suite.compile.catch2.%:
+	$(CXX) $(CXXFLAGS) -I catch2/include -c catch2_suite_$*.cpp
+	$(CXX) $(CXXFLAGS) -I catch2/include catch2/main.cpp *.o
+
 suite.compile.doctest:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I doctest/include -c doctest_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I doctest/include doctest/main.cpp *.o
 
+suite.compile.doctest.%:
+	$(CXX) $(CXXFLAGS) -I doctest/include -c doctest_suite_$*.cpp
+	$(CXX) $(CXXFLAGS) -I doctest/include doctest/main.cpp *.o
+
 suite.compile.ut:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I ut/include -c ut_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I ut/include ut/main.cpp *.o
+
+suite.compile.ut.%:
+	$(CXX) $(CXXFLAGS) -I ut/include -c ut_suite_$*.cpp
+	$(CXX) $(CXXFLAGS) -I ut/include ut/main.cpp *.o
 
 suite.compile.ut.pch:
 	@$(CXX) $(CXXFLAGS) -I ut/include ut/suite+assert+stl.pch.hpp -o suite+assert.stl.pch
@@ -91,21 +126,21 @@ ut.suite+assert+stl.benchmark: ut.header.suite+assert+stl.benchmark ut.pch.suite
 
 ut.header.%.benchmark:
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat ut/$*.header.erb) | erb > ut_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat ut/$*.header.erb) | erb > ut_suite_$$v.cpp; done
 	@time -f"$*:ut.header %e" make suite.compile.ut
 	@$(TIME) $*:ut.header
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:ut.header"
 
 ut.pch.%.benchmark:
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat ut/$*.pch.erb) | erb > ut_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat ut/$*.pch.erb) | erb > ut_suite_$$v.cpp; done
 	@time -f"$*:ut.pch %e" make suite.compile.ut.pch
 	@$(TIME) $*:ut.pch
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:ut.pch"
 
 ut.module.%.benchmark:
 	@make clean
-	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '%>' && cat ut/$*.module.erb) | erb > ut_suite_$$v.cpp; done
+	@for ((v=0; v<$(N); ++v)); do (echo '<% n=$(N); v=' $$v '; match="pass"; %>' && cat ut/$*.module.erb) | erb > ut_suite_$$v.cpp; done
 	@time -f"$*:ut.module %e" make suite.compile.ut.module
 	@$(TIME) $*:ut.module
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "$*:ut.module"
