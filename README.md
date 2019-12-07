@@ -76,7 +76,7 @@
 
   <tr>
     <td colspan="3" align="center">
-    <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Incremental Build / Suite+Assert+STL</b></a> / <i>1 cpp file change / 1'000 tests, 20'000 asserts, 100 cpp files</i>
+    <a href="https://github.com/cpp-testing/ut-benchmark/tree/master/benchmarks"><b>Incremental Build - Suite+Assert+STL</b></a> / <i>1 cpp file change (1'000 tests, 20'000 asserts, 100 cpp files)</i>
     </td>
   </tr>
   <tr>
