@@ -79,11 +79,12 @@ incremental.%.suite+assert+stl.benchmark:
 	@ls -l a.out | cut -d' ' -f6 | xargs echo "incremental.suite+assert+stl:$*"
 
 suite.compile.boost.test:
-	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I boost.test/include -c boost.test_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I boost.test/include boost.test/main.cpp boost.test/lib/libboost_unit_test_framework.a *.o
+	$(CXX) $(CXXFLAGS) -I boost.test/include -c boost.test/main.cpp 
+	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I boost.test/include -c boost.test_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I boost.test/include boost.test/lib/libboost_unit_test_framework.a *.o
 
 suite.compile.boost.test.%:
 	$(CXX) $(CXXFLAGS) -I boost.test/include -c boost.test_suite_$*.cpp
-	$(CXX) $(CXXFLAGS) -I boost.test/include boost.test/main.cpp boost.test/lib/libboost_unit_test_framework.a *.o
+	$(CXX) $(CXXFLAGS) -I boost.test/include boost.test/lib/libboost_unit_test_framework.a *.o
 
 suite.compile.googletest:
 	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I googletest/include -c googletest_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -lpthread googletest/lib/libgtest_main.a googletest/lib/libgtest.a *.o
@@ -93,25 +94,28 @@ suite.compile.googletest.%:
 	$(CXX) $(CXXFLAGS) -lpthread googletest/lib/libgtest_main.a googletest/lib/libgtest.a *.o
 
 suite.compile.catch2:
-	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I catch2/include -c catch2_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I catch2/include catch2/main.cpp *.o
+	$(CXX) $(CXXFLAGS) -I catch2/include -c catch2/main.cpp
+	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I catch2/include -c catch2_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I catch2/include *.o
 
 suite.compile.catch2.%:
 	$(CXX) $(CXXFLAGS) -I catch2/include -c catch2_suite_$*.cpp
-	$(CXX) $(CXXFLAGS) -I catch2/include catch2/main.cpp *.o
+	$(CXX) $(CXXFLAGS) -I catch2/include *.o
 
 suite.compile.doctest:
-	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I doctest/include -c doctest_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I doctest/include doctest/main.cpp *.o
+	$(CXX) $(CXXFLAGS) -I doctest/include -c doctest/main.cpp
+	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I doctest/include -c doctest_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I doctest/include *.o
 
 suite.compile.doctest.%:
 	$(CXX) $(CXXFLAGS) -I doctest/include -c doctest_suite_$*.cpp
-	$(CXX) $(CXXFLAGS) -I doctest/include doctest/main.cpp *.o
+	$(CXX) $(CXXFLAGS) -I doctest/include *.o
 
 suite.compile.ut:
-	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I ut/include -c ut_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I ut/include ut/main.cpp *.o
+	$(CXX) $(CXXFLAGS) -I ut/include -c ut/main.cpp
+	@for ((v=0; v<$(N); ++v)); do $(CXX) $(CXXFLAGS) -I ut/include -c ut_suite_$$v.cpp; done; $(CXX) $(CXXFLAGS) -I ut/include *.o
 
 suite.compile.ut.%:
 	$(CXX) $(CXXFLAGS) -I ut/include -c ut_suite_$*.cpp
-	$(CXX) $(CXXFLAGS) -I ut/include ut/main.cpp *.o
+	$(CXX) $(CXXFLAGS) -I ut/include *.o
 
 suite.compile.ut.pch:
 	@$(CXX) $(CXXFLAGS) -I ut/include ut/suite+assert+stl.pch.hpp -o suite+assert.stl.pch
